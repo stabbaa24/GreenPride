@@ -1,0 +1,221 @@
+body {
+    font-family: "Bookman Old Style";
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+#renderCanvas {
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+#rollDiceButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+    background-color: darkseagreen;
+    border: none;
+    border-radius: 5px;
+    cursor: crosshair;
+    transition: background-color 0.3s ease;
+}
+
+#rollDiceButton:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+/* POPUP RULES */
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 0.5em black;
+}
+
+#rules {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#rules:hover {
+    background-color: darkseagreen;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background-color: #8BB47A;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    opacity: 0.9;
+    width: 80%;
+    border-color: whitesmoke;
+    box-shadow: #9DE781 0 0 3em;
+}
+
+.close {
+    color: #35751A;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.styled-list, .styled-list ul {
+    padding: 0 0 0 30px;
+    list-style: none;
+    color: #333;
+}
+
+.styled-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.styled-list li:before {
+    content: '–';
+    display: inline-block;
+    width: 20px;
+    margin-left: -30px;
+}
+
+.styled-list span {
+    font-weight: bold;
+}
+
+.end-game-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkseagreen;
+    border: 2px solid black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.restart-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    padding: 20px;
+    color: black;
+    background-color: seagreen;
+    border: none;
+    border-radius: 5px;
+    cursor: crosshair;
+    transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+    background-color: yellowgreen;
+    color: black;
+}
+
+/* END POPUP RULES */
+
+img {
+    width: 10%;
+    height: 10%;
+    border: 1px solid rgb(0, 0, 0);
+    border-color: black;
+    box-shadow: #9DE781 0 0 1em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  img {
+    float:left;
+    position: static;
+    width: 10%;
+    max-width: 70px;
+    min-width: 70px;
+
+  }
+  
+  .text {
+    text-align: left;
+    padding-left: 1em;
+  }
+
+  
+/* scroll bar */
+
+/* Style pour la boîte de défilement */
+.scrollbar {
+    height: 700px; /* Hauteur fixe pour la boîte de défilement */
+    overflow-y: scroll; /* Activer la barre de défilement verticale */
+    position: relative; /* Positionnement relatif pour les pseudo-éléments */
+  }
+  
+  /* Style pour la barre de défilement */
+  .scrollbar::-webkit-scrollbar {
+    width: 8px; /* Largeur de la barre de défilement */
+  }
+  
+  /* Style pour le rail de la barre de défilement */
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Couleur de fond du rail */
+  }
+  
+  /* Style pour le curseur de la barre de défilement */
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #35751A; /* Couleur du curseur */
+    border-radius: 5px; /* Bordure arrondie */
+  }
+  
+  /* Style pour le coin de la barre de défilement */
+  .scrollbar::-webkit-scrollbar-corner {
+    background-color: #f1f1f1; /* Couleur de fond du coin */
+  }
+  
+  /* Style pour les boutons de la barre de défilement */
+  .scrollbar::-webkit-scrollbar-button {
+    display: none; /* Masquer les boutons */
+  }
